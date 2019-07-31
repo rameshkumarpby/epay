@@ -1,4 +1,9 @@
 let routes  = [
+  {
+    name: 'setting',
+    path:'/setting',
+    pageName: 'setting',
+  },
     {
         name: 'about',
         path: '/about',
