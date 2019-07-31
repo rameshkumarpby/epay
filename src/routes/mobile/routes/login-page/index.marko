@@ -1,0 +1,67 @@
+<div id="login" data-name="login" class="page">
+    <!-- Top Navbar -->
+    <!-- <div class="navbar">
+        <div class="navbar-inner sliding">
+            <div class="title">Login</div>
+        </div>
+    </div> -->
+    <!-- Toolbar -->
+    <!-- <div class="toolbar">
+        <div class="toolbar-inner">
+            <a href="#" class="link">Setting</a>
+        </div>
+    </div> -->
+    <!-- Scrollable page content -->
+    <div class="page-content">
+        <div class="page no-navbar no-toolbar no-swipeback">
+            <div class="page-content login-screen-content">
+                <div class="login-screen-title">ePay</div>
+                <form>
+                    <div class="list">
+                        <ul>
+                            <li class="item-content item-input">
+                                <div class="item-inner">
+                                    <div class="item-title item-label">Username</div>
+                                    <div class="item-input">
+                                        <input type="text" name="username" placeholder="Your username"/>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item-content item-input">
+                                <div class="item-inner">
+                                    <div class="item-title item-label">Password</div>
+                                    <div class="item-input">
+                                        <input type="password" name="password" placeholder="Your password"/>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item-content item-input">
+                                <div class="item-inner">
+                                    <a class="item-title item-label">Forget Password</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <p>Count Value : ${state.count}</p>
+                            <li>
+                                <a on-click("increment") class="item-link list-button">Sign In</a>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+class {
+    onCreate() {
+        this.state = {
+            count: 0
+        };
+    }
+    increment() {
+        this.state.count++;
+    }
+}

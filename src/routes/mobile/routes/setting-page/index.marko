@@ -1,4 +1,4 @@
-<div id="setting" data-name="settings" class="page">
+<div id="setting" data-name="setting" class="page">
     <!-- Top Navbar -->
     <div class="navbar">
         <div class="navbar-inner sliding">
@@ -6,28 +6,45 @@
         </div>
     </div>
     <!-- Toolbar -->
-    <div class="toolbar">
+    <!-- <div class="toolbar">
         <div class="toolbar-inner">
-            <!-- Toolbar links -->
             <a href="#" class="link">Setting</a>
         </div>
-    </div>
+    </div> -->
     <!-- Scrollable page content -->
     <div class="page-content">
-
-            <div class="list">
-                <div class="list-group">
-                    <ul>
-                    <li class="list-group-title">Settings</li>
-                        <!-- List items -->
-                        <li class="item-content">rameshkumarpb@gmail.com</li>
-                        <li class="item-link list-button">Wallet</li>
-                        <!-- Another list items -->
-                        <li class="item-link list-button">Change Password</li>
-                        <li class="item-link list-button">Rameshkumar(Logout)</li>
-                    </ul>
-                </div>
+        <p>
+        Count Value : ${state.count}
+        </p>
+        <div class="list">
+            <div class="list-group">
+                <ul>
+                    <!-- <my-counter></my-counter> -->
+                    <li on-click('increment') class="item-link list-button">Increment</li>
+                    <li on-click('decrement') class="item-link list-button">Decrement</li>
+                    
+                    <li class="item-content">rameshkumarpb@gmail.com</li>
+                    <li class="item-link list-button">Wallet</li>
+                    <li class="item-link list-button">Change Password</li>
+                    <li class="item-link list-button">Rameshkumar(Logout)</li>
+                </ul>
             </div>
-        
+        </div>
     </div>
 </div>
+
+class {
+  onCreate() {
+    this.state = {
+      count: 0
+    };
+  }
+
+  increment() {
+    this.state.count++;
+  }
+
+  decrement() {
+    this.state.count--;
+  }
+};
